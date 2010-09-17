@@ -1,0 +1,23 @@
+1. Load a CT study.
+
+2. In VirtualColon module:
+     specify the "Prediction file", e.g., pred_dist.svm.csv.
+     specify the input volume (volume loaded in step 1).
+     specify "Polyp feature file", e.g., 3_ExtractedPolyps.mat.matched.1.csv.
+     specify "Voxel feature file", e.g., 3_ExtractedVoxels.mat.matched.1.csv.
+     specifiy "Patient" Id, e.g., WRAMC_VC-026. (This, together with study id, are used to establish relationship between feature files and prediction file.)
+     specify "Study" Id, e.g., 3.
+
+3. Click on "Apply" button, a list of polyp candidates for current CT study should be displayed.
+
+4. In the "Segmentation" frame, specify segmentation file "File(.vtk)", e.g., 3_tag.vtk. Click on "Load & Contour" button to generate the surface model of the colon. The colon surface should be visible in the main viewer in 3D Slicer.
+
+5. Click on any polyp candidate in the list, a red dot will be displayed on the colon surface. (If the red dot is not located on the surface, the colon surface model may need to be transformed. Click on the "Transform" button in the Segmentation frame do the job for you.)
+
+6. Change the mouse mode from "Transform view" mode to "pick" mode. 
+
+7. In 3D Slicer main viewer, click on one red dot. The surface for that polyp candidate will be shown in a small window.
+
+8. Change the mouse mode from "pick" mode to "transform view" mode to rotate/translate the polyp candidate surface.
+
+9. In the polyp candiate window, press "v" to display voxels and press "c" to hide voxels.
